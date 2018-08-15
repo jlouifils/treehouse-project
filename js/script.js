@@ -8,7 +8,7 @@ var quotes = [ /* Five quotes stored in a array */
   },
   {
     quote: "Run! Forrest run",
-    source: 'Janice - Forrest Gump',
+    source: 'Jenny - Forrest Gump',
     year: 1994
   },
   {
@@ -42,14 +42,10 @@ function printQuote() {
     stringOfQuoteProperties += `<span class='year'> ${actualQuote.year} </span>`;
   } else {
     } /* adds year property of quote, if there is one */
-
+document.write(printQuote)
 document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
-}
+} getRandomQuote();
 
-// randomColor function
-function getRandomColor() {
-  var RandomColor =
-}
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
