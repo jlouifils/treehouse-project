@@ -30,21 +30,25 @@ var quotes = [ /* Five quotes stored in a array */
 
 //  getRandomQuuote function
 function getRandomQuote(array) {
-  var randomQuotes = quotes[Math.floor(Math.random()*quotes.length)]; /* Selects random quote from array.*/
-  return (randomQuotes);/* return quote randomly. */
+   /* Selects random quote from array.*/
+  var randomQuotes = quotes[Math.floor(Math.random()*quotes.length)];
+  /* return quote randomly. */
+  return (randomQuotes);
 }
 
 //  printQuote funtion
 function printQuote() {
-  var actualQuote = getRandomQuote(quotes); /* printQuote function calls getRandomQuote */
-  var stringOfQuoteProperties = `<p class='quote'> ${actualQuote.quote} </p> <p class='source'> ${actualQuote.source} </p>`          /* html markup */
-  if (actualQuote.hasOwnProperty('year')) {   /* checks Quotes for a quote with year property */
+  /* printQuote function calls getRandomQuote */
+  var actualQuote = getRandomQuote(quotes);
+  /* html markup */
+  var stringOfQuoteProperties = `<p class='quote'> ${actualQuote.quote} </p> <p class='source'> ${actualQuote.source} </p>`
+  /* checks Quotes for a quote with year property */          
+  if (actualQuote.hasOwnProperty('year')) {
     stringOfQuoteProperties += `<span class='year'> ${actualQuote.year} </span>`;
   } else {
     } /* adds year property of quote, if there is one */
-document.write(printQuote)
 document.getElementById('quote-box').innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
-} getRandomQuote();
+}
 
 
 // This event listener will respond to "Show another quote" button clicks
